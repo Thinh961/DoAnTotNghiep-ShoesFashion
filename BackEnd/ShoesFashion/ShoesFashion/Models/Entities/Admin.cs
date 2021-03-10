@@ -10,6 +10,7 @@ namespace ShoesFashion.Models.Entities
     [Table("Admin")]
     public class Admin
     {
+
         [Key]
         [Column("admin_id")]
         public int AdminId { get; set; }
