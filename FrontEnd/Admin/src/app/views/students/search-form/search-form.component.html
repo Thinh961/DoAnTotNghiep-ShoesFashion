@@ -1,0 +1,22 @@
+<div class="input-group">
+  <!-- Search form -->
+  <form class="navbar-search form-inline" id="navbar-search-main">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        id="search"
+        placeholder="tìm kiếm theo id"
+        #id
+        autocomplete="off"
+        min="0"
+      />
+      <span
+        class="input-group-text btn-search"
+        id="button-search"
+        (click)="onSearch(id.value); id.value = ''"
+        ><span class="fas fa-search"></span
+      ></span>
+    </div>
+  </form>
+</div>

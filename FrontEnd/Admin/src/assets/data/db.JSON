@@ -1,0 +1,36 @@
+{
+  "Course": [
+    {
+      "id": 1,
+      "createdAt": "05/02/2021",
+      "avatar": "",
+      "price": "100",
+      "is_available": true
+     },
+     {
+      "id": 2,
+      "createdAt": "05/02/2021",
+      "avatar": "",
+      "price": "100",
+      "is_available": true
+     },
+     {
+      "id": 3,
+      "createdAt": "05/02/2021",
+      "avatar": "",
+      "price": "100",
+      "is_available": true
+     },
+     {
+      "id": 4,
+      "createdAt": "05/02/2021",
+      "avatar": "",
+      "price": "100",
+      "is_available": true
+     }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
