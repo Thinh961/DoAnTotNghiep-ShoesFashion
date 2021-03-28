@@ -1,0 +1,96 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary float-right m-2"
+data-toggle="modal"
+data-target="#exampleModal"
+(click)="addClick()"
+data-backdrop="static" data-keyboard="false"
+>
+  Thêm người dùng
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+        <button type="button" class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeClick()"
+            >
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-kh [customer]="customer" *ngIf="ActivateAddEdit"></app-add-edit-kh>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- End modal -->
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">
+        <div class="d-flex flex-row">
+          <input type="" [(ngModel)]="CustomerIdFilter" class="form-control" (keyup)="FilterFn()" placeholder="Lọc ID">
+        </div>
+        ID
+      </th>
+
+      <th scope="col">
+        <div class="d-flex flex-row">
+          <input type="" [(ngModel)]="CustomerFullNameFilter" class="form-control" (keyup)="FilterFn()" placeholder="Lọc Họ & Tên">
+        </div>
+        Họ tên
+      </th>
+
+      <th scope="col">
+        <div class="d-flex flex-row">
+          <input type="" [(ngModel)]="CustomerUsernameFilter" class="form-control" (keyup)="FilterFn()" placeholder="Lọc Tài Khoản">
+        </div>
+        Tài khoản
+      </th>
+
+      <th scope="col">Mật khẩu</th>
+
+      <th scope="col">
+        <div class="d-flex flex-row">
+          <input type="" [(ngModel)]="CustomerPhoneFilter" class="form-control" (keyup)="FilterFn()" placeholder="Lọc SĐT">
+        </div>
+        Điện thoại
+      </th>
+
+      <th scope="col">Tác vụ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cus of CustomerList">
+      <th scope="row">{{cus.id}}</th>
+      <td>{{cus.fullName}}</td>
+      <td>{{cus.username}}</td>
+      <td>{{cus.password}}</td>
+      <td>{{cus.phone}}</td>
+      <td>
+        <button type="button" class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+          (click)="editClick(cus)"
+          data-backdrop="static" data-keyboard="false"
+        >
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="btn btn-danger" (click)="deleteClick(cus)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

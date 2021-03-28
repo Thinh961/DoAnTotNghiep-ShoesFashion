@@ -1,0 +1,133 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div>
+      <label>Tên sản phẩm</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="productName"
+        placeholder="Nhập tên sản phẩm"
+
+      />
+    </div>
+
+    <div class="row">
+    <div class="col">
+      <label>Nhà cung cấp</label>
+      <select class="form-control" id="" [(ngModel)]="supplierId">
+        <option *ngFor="let Supplier of SupplierList" [value]="Supplier.id">{{Supplier.supplierName}}</option>
+      </select>
+    </div>
+
+    <div class="col">
+      <label>Danh mục</label>
+      <select class="form-control" [(ngModel)]="categoryId">
+        <option *ngFor="let Category of CategoryList" [value]="Category.id">{{Category.categoryName}}</option>
+      </select>
+    </div>
+  </div>
+
+    <div>
+      <label>Ảnh</label>
+      <input
+        type="file"
+        class="form-control"
+        [(ngModel)]="image"
+        placeholder="Thêm ảnh"
+      />
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label>Ngày tạo</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="createDate"
+          placeholder="Ngày tạo"
+        />
+      </div>
+
+      <div class="col">
+        <label class="">Ngày cập nhật</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="updateDate"
+          placeholder="Ngày cập nhật"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <label class="">Mô tả</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="description"
+          placeholder="Mô tả"
+        />
+      </div>
+
+      <div class="form-group col-md-4">
+        <label class="">Tên viết tắt</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="shortName"
+          placeholder="Tên viết tắt"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label class="">Ngày bắt đầu Sale</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="startSale"
+          placeholder="Ngày bắt đầu Sale"
+        />
+      </div>
+
+      <div class="col">
+        <label>Ngày kết thúc Sale</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="endSale"
+          placeholder="Ngày kết thúc sale"
+        />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="Close()">
+      Đóng
+    </button>
+    <button
+      id="closeModal"
+      type="submit"
+      (click)="addProducts()"
+      *ngIf="products.id == 0"
+      class="btn btn-primary"
+    >
+      Thêm
+    </button>
+
+    <button
+      id="closeModal"
+      (click)="updateProducts()"
+      *ngIf="products.id != 0"
+      class="btn btn-primary"
+    >
+      Cập nhật
+    </button>
+</div>
+
+

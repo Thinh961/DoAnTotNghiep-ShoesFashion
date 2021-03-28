@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-lg-12">
+
+    <div class="">
+      <label>Tên khách hàng</label>
+      <select class="form-control" id="" [(ngModel)]="CustomerList">
+        <option *ngFor="let cus of CustomerList" [value]="cus.id">{{cus.fullName}}</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Mô tả</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="phoneShip"
+        placeholder="Mô tả"
+      />
+    </div>
+
+  </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="Close()">
+      Đóng
+    </button>
+    <button
+      id="closeModal"
+      type="submit"
+      (click)="add()"
+      *ngIf="orders.id == 0"
+      class="btn btn-primary"
+    >
+      Thêm
+    </button>
+
+    <button
+      id="closeModal"
+      (click)="update()"
+      *ngIf="orders.id != 0"
+      class="btn btn-primary"
+    >
+      Cập nhật
+    </button>
+</div>

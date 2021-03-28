@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="CoreUI Pro Angular Admin Template">
+  <meta name="author" content="Łukasz Holeczek">
+  <meta name="keyword" content="Bootstrap,Admin,Template,Free,Angular,Dashboard,Typescript">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <!-- fontawesome -->
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- boostrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title>NCT_Admin</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Client -->
+  <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+  </script>
+
+  <!-- link css - js - font -->
+  <link rel="stylesheet" href="./assets/client-assets/css/bootstrap.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/checkout.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/contact.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/creditly.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/easy-responsive-tabs.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/flexslider.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/fontawesome-all.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/jquery-ui1.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/login_overlay.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/owl.theme.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/shop.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/simplyCountdown.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/style.css">
+  <link rel="stylesheet" href="./assets/client-assets/css/style6.css">
+  <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+
+  <!-- client -->
+
+</head>
+<body class="app">
+  <!-- App Loading... -->
+</body>
+
+<!-- js boostrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- script add-product -->
+<script>
+  $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+</script>
+
+<!-- Client -->
+<!-- <script src="./assets/js/jquery-2.2.3.min.js"></script> -->
+<script src="./assets/client-assets/js/jquery-2.2.3.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#myModal").modal();
+  });
+</script>
+<!-- // modal -->
+
+<!--search jQuery-->
+<script src="./assets/client-assets/js/modernizr-2.6.2.min.js"></script>
+<script src="./assets/client-assets/js/classie-search.js"></script>
+<!-- <script src="./assets/js/demo1-search.js"></script> -->
+<!--//search jQuery-->
+<!-- cart-js -->
+<script src="./assets/client-assets/js/minicart.js"></script>
+<script>
+  googles.render();
+
+  googles.cart.on('googles_checkout', function (evt) {
+    var items, len, i;
+
+    if (this.subtotal() > 0) {
+      items = this.items();
+
+      for (i = 0, len = items.length; i < len; i++) {}
+    }
+  });
+</script>
+<!-- //cart-js -->
+<script>
+  $(document).ready(function () {
+    $(".button-log a").click(function () {
+      $(".overlay-login").fadeToggle(200);
+      $(this).toggleClass('btn-open').toggleClass('btn-close');
+    });
+  });
+  $('.overlay-close1').on('click', function () {
+    $(".overlay-login").fadeToggle(200);
+    $(".button-log a").toggleClass('btn-open').toggleClass('btn-close');
+    open = false;
+  });
+</script>
+<!-- carousel -->
+<!-- Count-down -->
+<script src="../assets/client-assets/js/simplyCountdown.js"></script>
+<!-- <script>
+  var d = new Date();
+  simplyCountdown('simply-countdown-custom', {
+    year: d.getFullYear(),
+    month: d.getMonth() + 2,
+    day: 25
+  });
+</script> -->
+<!--// Count-down -->
+<script src="./assets/client-assets/js/owl.carousel.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        600: {
+          items: 2,
+          nav: false
+        },
+        900: {
+          items: 3,
+          nav: false
+        },
+        1000: {
+          items: 4,
+          nav: true,
+          loop: false,
+          margin: 20
+        }
+      }
+    })
+  })
+</script>
+
+<!-- //end-smooth-scrolling -->
+
+
+<!-- dropdown nav -->
+<script>
+  $(document).ready(function () {
+    $(".dropdown").hover(
+      function () {
+        $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+        $(this).toggleClass('open');
+      },
+      function () {
+        $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+        $(this).toggleClass('open');
+      }
+    );
+  });
+</script>
+<!-- //dropdown nav -->
+<script src="./assets/client-assets/js/move-top.js"></script>
+  <script src="./assets/client-assets/js/easing.js"></script>
+  <script>
+      jQuery(document).ready(function($) {
+          $(".scroll").click(function(event) {
+              event.preventDefault();
+              $('html,body').animate({
+                  scrollTop: $(this.hash).offset().top
+              }, 900);
+          });
+      });
+  </script>
+  <script>
+      $(document).ready(function() {
+          /*
+                      var defaults = {
+                          containerID: 'toTop', // fading element id
+                        containerHoverID: 'toTopHover', // fading element hover id
+                        scrollSpeed: 1200,
+                        easingType: 'linear'
+                       };
+                      */
+
+          $().UItoTop({
+              easingType: 'easeOutQuart'
+          });
+
+      });
+  </script>
+  <!--// end-smoth-scrolling -->
+
+<script src="./assets/client-assets/js/bootstrap.js"></script>
+<!-- js file -->
+<script src="./assets/client-assets/js/creditly.js"></script>
+<script src="./assets/client-assets/js/easy-responsive-tabs.js"></script>
+<script src="./assets/client-assets/js/imagezoom.js"></script>
+<script src="./assets/client-assets/js/jquery-ui.js"></script>
+<script src="./assets/client-assets/js/jquery.easing.min.js"></script>
+<script src="./assets/client-assets/js/jquery.flexslider.js"></script>
+<script src="./assets/client-assets/js/jquery.magnific-popup.js"></script>
+<!-- client -->
+
+</html>

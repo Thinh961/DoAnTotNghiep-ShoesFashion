@@ -15,7 +15,7 @@ namespace NCT_Fashion.Models.Entities
 
         public int CustomerId { get; set; }
 
-        [Required]
+        //[Required]  
         public string UserName { get; set; }
 
         [Required]

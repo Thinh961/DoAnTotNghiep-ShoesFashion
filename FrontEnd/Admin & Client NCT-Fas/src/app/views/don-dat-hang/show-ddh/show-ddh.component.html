@@ -1,0 +1,77 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary float-right m-2"
+data-toggle="modal"
+data-target="#exampleModal"
+(click)="addClick()"
+data-backdrop="static" data-keyboard="false"
+>
+  Thêm danh mục
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+        <button type="button" class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeClick()"
+            >
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-ddh [orders]="orders" *ngIf="ActivateAddEdit"></app-add-edit-ddh>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- End modal -->
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Tên khách</th>
+      <th scope="col">Tên của bạn</th>
+      <th scope="col">SĐT</th>
+      <th scope="col">Địa chỉ</th>
+      <th scope="col">Tổng tiền</th>
+      <th scope="col">Ngày đặt</th>
+      <th scope="col">Trạng thái</th>
+      <th scope="col">Tác vụ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let o of OrdersList">
+      <th scope="row">{{o.id}}</th>
+      <td>{{o.customerId}}</td>
+      <td>{{o.userName}}</td>
+      <td>{{o.phoneShip}}</td>
+      <td>{{o.addressShip}}</td>
+      <td>{{o.total}}</td>
+      <td>{{o.createDate}}</td>
+      <td>{{o.status}}</td>
+      <td>
+        <button type="button" class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+          (click)="editClick(o)"
+          data-backdrop="static" data-keyboard="false"
+        >
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="btn btn-danger" (click)="deleteClick(o)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

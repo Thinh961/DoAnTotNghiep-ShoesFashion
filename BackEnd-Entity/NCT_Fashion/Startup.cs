@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
+using System.IO;
+using Microsoft.Extensions.FileProviders;
 
 namespace NCT_Fashion
 {
@@ -28,6 +30,12 @@ namespace NCT_Fashion
         {
             //đọc cấu hình ánh xạ từ appsetting
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig")); //B1 Jwt
+
+            //CORS
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -75,7 +83,8 @@ namespace NCT_Fashion
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NCT_Fashion v1"));
             }
 
-            app.UseHttpsRedirection();
+            //CORS
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseRouting();
 
@@ -86,6 +95,14 @@ namespace NCT_Fashion
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            //photo
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(env.ContentRootPath,"Images")),
+                RequestPath= "/Images"
             });
         }
     }

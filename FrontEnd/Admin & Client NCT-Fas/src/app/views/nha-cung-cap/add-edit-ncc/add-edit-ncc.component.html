@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div>
+      <label>Tên nhà cung cấp</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="supplierName"
+        placeholder="Nhập nhà cung cấp"
+      />
+    </div>
+
+    <div>
+      <label>SĐT</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="phone"
+        placeholder="Nhập SĐT"
+      />
+    </div>
+
+    <div>
+      <label>Địa chỉ</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="address"
+        placeholder="Nhập địa chỉ"
+      />
+    </div>
+
+  </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="Close()">
+      Đóng
+    </button>
+    <button
+      id="closeModal"
+      type="submit"
+      (click)="add()"
+      *ngIf="suppliers.id == 0"
+      class="btn btn-primary"
+    >
+      Thêm
+    </button>
+
+    <button
+      id="closeModal"
+      (click)="update()"
+      *ngIf="suppliers.id != 0"
+      class="btn btn-primary"
+    >
+      Cập nhật
+    </button>
+</div>
+
+

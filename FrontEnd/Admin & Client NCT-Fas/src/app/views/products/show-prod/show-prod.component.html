@@ -1,0 +1,79 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary float-right m-2"
+data-toggle="modal"
+data-target="#exampleModal"
+(click)="addClick()"
+data-backdrop="static" data-keyboard="false"
+>
+  Thêm Sản Phẩm
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+        <button type="button" class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeClick()"
+            >
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-prod [products]="products" *ngIf="ActivateAddEdit"></app-add-edit-prod>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- End modal -->
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Tên sản phẩm</th>
+      <th scope="col">Ảnh</th>
+      <th scope="col">Ngày nhập</th>
+      <th scope="col">Ngày cập nhật</th>
+      <th scope="col">Mô tả</th>
+      <th scope="col">Tên ngắn</th>
+      <th scope="col">Start Sale</th>
+      <th scope="col">End Sale</th>
+      <th scope="col">Tác vụ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of ProductsList">
+      <th scope="row">{{prod.id}}</th>
+      <td>{{prod.productName}}</td>
+      <td>{{prod.image}}</td>
+      <td>{{prod.createDate | date: "dd/MM/yyyy"}}</td>
+      <td>{{prod.updateDate | date: "dd/MM/yyyy"}}</td>
+      <td>{{prod.description}}</td>
+      <td>{{prod.shortName}}</td>
+      <td>{{prod.startSale | date: "dd/MM/yyyy"}}</td>
+      <td>{{prod.endSale | date: "dd/MM/yyyy"}}</td>
+      <td>
+        <button type="button" class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+          (click)="editClick(prod)"
+          data-backdrop="static" data-keyboard="false"
+        >
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="btn btn-danger" (click)="deleteClick(prod)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
