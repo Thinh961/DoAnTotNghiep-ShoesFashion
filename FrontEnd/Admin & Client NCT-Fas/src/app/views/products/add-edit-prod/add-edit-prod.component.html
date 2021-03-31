@@ -27,14 +27,16 @@
     </div>
   </div>
 
-    <div>
-      <label>Ảnh</label>
+    <div class="mt-2">
+      <!-- <label>Ảnh</label>
       <input
         type="file"
         class="form-control"
         [(ngModel)]="image"
         placeholder="Thêm ảnh"
-      />
+      /> -->
+      <img [src]=PhotoFilePath height="100px" width="100px">
+      <input type="file" (change)="uploadPhoto($event)" class="mt-2">
     </div>
 
     <div class="row">

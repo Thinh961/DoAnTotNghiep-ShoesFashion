@@ -1,16 +1,10 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 
 html,
 body {
     margin: 0;
     font-size: 100%;
     background: #fff;
-    font-family: 'Inconsolata', monospace;
+    /* font-family: 'Inconsolata', monospace; */
 }
 
 body a {
@@ -20,7 +14,7 @@ body a {
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
-    font-family: 'Inconsolata', monospace;
+    /* font-family: 'Inconsolata', monospace; */
 }
 
 a:hover {
@@ -37,7 +31,7 @@ input[type="search"] {
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
-    font-family: 'Inconsolata', monospace;
+    /* font-family: 'Inconsolata', monospace; */
 }
 
 h1,
@@ -47,7 +41,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Inconsolata', monospace;
+    /* font-family: 'Inconsolata', monospace; */
     letter-spacing: 1px;
 }
 
@@ -1906,7 +1900,7 @@ ul.links li a:hover {
     .owl-item.active {
        padding:0px;
     }
- 
+
 }
 
 @media(max-width:1024px) {
@@ -2092,7 +2086,7 @@ ul.links li a:hover {
         min-height: 271px;
         padding: 3em 0 0 0;
     }
-  
+
 }
 
 @media(max-width:768px) {
@@ -2103,7 +2097,7 @@ ul.links li a:hover {
     }
     .carousel-item {
         height: 26em;
-    }  
+    }
       .bottom-sub-grid {
         padding: 1em 4em;
     }
@@ -2175,12 +2169,12 @@ ul.links li a:hover {
 }
 
 @media(max-width:640px) {
-   
+
     ul.short {
         text-align: left;
         padding: 3em 0em 0 1.3em;
     }
-  
+
     .ser-first-grid p {
         padding: 0 5px;
     }
@@ -2205,7 +2199,7 @@ ul.links li a:hover {
     }
     .carousel-caption {
         bottom: 4em;
-    }   
+    }
     .nav-mega .dropdown-menu.mega-menu>li {
         padding: 2em 1em;
     }

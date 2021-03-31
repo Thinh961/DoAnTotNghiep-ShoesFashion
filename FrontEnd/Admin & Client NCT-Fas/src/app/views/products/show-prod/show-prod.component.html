@@ -54,7 +54,7 @@ data-backdrop="static" data-keyboard="false"
     <tr *ngFor="let prod of ProductsList">
       <th scope="row">{{prod.id}}</th>
       <td>{{prod.productName}}</td>
-      <td>{{prod.image}}</td>
+      <td><img src="http://localhost:5000/Photos/{{prod.image}}" width="95px" height="75px"></td>
       <td>{{prod.createDate | date: "dd/MM/yyyy"}}</td>
       <td>{{prod.updateDate | date: "dd/MM/yyyy"}}</td>
       <td>{{prod.description}}</td>

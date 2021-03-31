@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class SharedService {
 
   readonly ApiUrl="http://localhost:5000/api";
+  readonly PhotoUrl="http://localhost:5000/Photos";
 
 
   constructor(private http: HttpClient) { }
@@ -129,6 +130,12 @@ export class SharedService {
 
   deleteOrder(val:any){
     return this.http.delete(this.ApiUrl+'/orders/'+val);
+  }
+
+
+  // Upload Ảnh
+  UploadPhoto(val:any){
+    return this.http.post(this.ApiUrl+'/products/saveFile',val)
   }
 
 }

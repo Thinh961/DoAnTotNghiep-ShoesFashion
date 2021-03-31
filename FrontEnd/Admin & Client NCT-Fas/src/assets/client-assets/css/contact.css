@@ -34,7 +34,7 @@ p.sub {
 .contact_grid_right input[type="email"],
 .contact_grid_right textarea {
     outline: none;
-    padding: 15px 15px;
+    padding: 27px 15px;
     font-size: 14px;
     color: #777;
     background: #f7f7f7;
@@ -173,7 +173,7 @@ p.sub {
         width: 100%;
         height: 250px;
     }
-  
+
 }
 
 @media(max-width:600px) {

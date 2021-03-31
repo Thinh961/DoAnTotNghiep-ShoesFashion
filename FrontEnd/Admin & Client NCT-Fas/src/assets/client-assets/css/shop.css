@@ -1,6 +1,6 @@
-body {
+/* body {
 	font-family: 'Inconsolata', monospace;
-}
+} */
 
 /*-- Shopping-Cart-PopUp --*/
 
@@ -907,7 +907,7 @@ input.checked {
 .product_price h4 a {
 	color: #959596;
     font-size: 0.8em;
-    font-family: 'Inconsolata', monospace;
+    /* font-family: 'Inconsolata', monospace; */
 }
 
 /*-- //customer --*/
@@ -1269,7 +1269,7 @@ ul.footer_list_icons.single_in li a:hover {
 .nav .open>a,
 .nav .open>a:hover,
 .nav .open>a:focus {
-	background-color: #F60B0E;
+	/* background-color: #F60B0E; */
 	color: #fff;
 }
 
@@ -1405,7 +1405,7 @@ span.item_price {
     .product-men.women_two {
         padding: 0 5px;
     }
-    
+
 }
 
 @media(max-width:991px) {

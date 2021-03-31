@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { SharedService } from "../../../_services/shared.service"
 
 @Component({
@@ -28,7 +28,7 @@ export class ShowProdComponent implements OnInit {
       productName:"",
       categoryId:"",
       supplierId:"",
-      image:"",
+      image:"anonymous.png",
       createDate:"",
       updateDate:"",
       description:"",

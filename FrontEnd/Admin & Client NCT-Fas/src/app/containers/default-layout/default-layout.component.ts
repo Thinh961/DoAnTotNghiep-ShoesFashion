@@ -38,6 +38,6 @@ export class DefaultLayoutComponent implements OnDestroy {
 
   logout() {
     this.authenticationService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/client']);
   }
 }

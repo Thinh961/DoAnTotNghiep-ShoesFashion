@@ -9,6 +9,7 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { AuthGuard } from './_helpers/auth.guard';
 import { ClientDefaultLayoutComponent } from './containers/client-default-layout/client-default-layout.component';
+import { RegisterComponent } from './views/register/register.component';
 
 
 export const routes: Routes = [
@@ -38,6 +39,13 @@ export const routes: Routes = [
       title: 'Login Page'
     }
   },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    data: {
+      title: 'Register Page'
+    }
+  },
 
   {
     path: '', component: ClientDefaultLayoutComponent,
@@ -48,14 +56,14 @@ export const routes: Routes = [
         loadChildren: './client/client.module#ClientModule',
       },
       // {
-      //   path: 'home',
+      //   path: 'about',
       //   loadChildren: './client/client.module#ClientModule',
       // },
     ]
   },
 
   {
-    path: 'admin', component: DefaultLayoutComponent,
+    path: 'admin', component: DefaultLayoutComponent, canActivate: [AuthGuard],
     data: { title: 'Home' },
     children: [
       {

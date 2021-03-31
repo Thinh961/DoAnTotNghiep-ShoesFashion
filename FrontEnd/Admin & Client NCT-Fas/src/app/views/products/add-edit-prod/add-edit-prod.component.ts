@@ -29,6 +29,7 @@ export class AddEditProdComponent implements OnInit {
     shortName:string;
     startSale:string;
     endSale:string;
+    PhotoFilePath:string;
 
   ngOnInit() {
     this.showProd.refreshProdList();
@@ -45,10 +46,12 @@ export class AddEditProdComponent implements OnInit {
     this.shortName = this.products.shortName;
     this.startSale = this.products.startSale;
     this.endSale = this.products.endSale;
+    this.PhotoFilePath = this.service.PhotoUrl+this.image;
 
   }
 
-  // refresh dữ liệu trả về từ Supplier(SuppList)
+
+  // hứng dữ liệu trả về từ Supplier(SuppList)
   refreshSuppList(){
     this.service.getSuppList().subscribe(data =>{
     //  console.log(data);
@@ -56,7 +59,7 @@ export class AddEditProdComponent implements OnInit {
     });
   }
 
-  // refresh dữ liệu trả về từ Category(CategoryList)
+  // hứng dữ liệu trả về từ Category(CategoryList)
   refreshCategoList(){
     this.service.getCateList().subscribe(data =>{
      this.CategoryList = data;
@@ -109,6 +112,21 @@ export class AddEditProdComponent implements OnInit {
       alert("Đã cập nhật!");
       // this.showProd.closeClick();
       this.showProd.refreshProdList();
+    });
+  }
+
+
+  // ảnh
+  uploadPhoto(event){
+    var file = event.target.files[0];
+    // console.log(file);
+
+    const formData:FormData = new FormData();
+    formData.append('uploadedFile',file, file.name);
+
+    this.service.UploadPhoto(formData).subscribe((data:any)=>{
+      this.image=data.toString();
+      this.PhotoFilePath=this.service.PhotoUrl+this.image;
     });
   }
 

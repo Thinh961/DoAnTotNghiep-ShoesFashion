@@ -7,13 +7,13 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-import { ShopComponent } from './pages/shop/shop.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, ContactComponent, ProductsComponent, ProductDetailComponent, ShopComponent,],
+  declarations: [HomeComponent, AboutComponent, ContactComponent, ProductsComponent, ProductDetailComponent,],
   imports: [
     CommonModule,
     ClientRoutingModule
-  ]
+  ],
+  exports: [HomeComponent, AboutComponent, ContactComponent, ProductsComponent, ProductDetailComponent]
 })
 export class ClientModule { }

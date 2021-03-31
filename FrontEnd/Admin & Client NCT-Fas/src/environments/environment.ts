@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000',
+  apiUrl: 'http://localhost:5000/api',
   apiSale: 'https://6018d45a971d850017a4049c.mockapi.io/api/'
 };

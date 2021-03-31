@@ -1,0 +1,22 @@
+header.header-bg {
+  background-color: white;
+}
+.row.edit-fontz {
+  font-size: 1.1rem;
+}
+ul.cart-inner-info {
+  cursor: pointer;
+}
+ul.navbar-nav.nav-mega.mx-auto {
+  cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+  /* color: #ff4e00; */
+  font-weight: 600;
+}
+
+h1.logo-w3layouts a.navbar-brand {
+  font-size: 2.5em;
+}

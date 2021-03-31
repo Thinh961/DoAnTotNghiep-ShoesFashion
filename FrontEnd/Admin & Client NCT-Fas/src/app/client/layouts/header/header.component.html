@@ -1,11 +1,11 @@
 <!-- header -->
-<header>
-  <div class="row">
+<header class="header-bg">
+  <div class="row edit-fontz">
     <div class="col-md-3 top-info text-left mt-lg-4">
-      <h6>Need Help</h6>
+      <h6>HỖ TRỢ</h6>
       <ul>
         <li>
-          <i class="fas fa-phone"></i> Call-</li>
+          <i class="fas fa-phone"></i> GỌI-</li>
         <li class="number-phone mt-3"> 0376777199</li>
       </ul>
     </div>
@@ -19,7 +19,7 @@
     <div class="col-md-3 top-info-cart text-right mt-lg-4">
       <ul class="cart-inner-info">
         <li class="button-log">
-          <a class="btn-open" href="#">
+          <a class="btn-open" href="#/login">
             <span class="fa fa-user" aria-hidden="true"></span>
           </a>
         </li>
@@ -28,14 +28,14 @@
             <input type="hidden" name="cmd" value="_cart">
             <input type="hidden" name="display" value="1">
             <button class="top_googles_cart" type="submit" name="submit" value="">
-              My Cart
+              Giỏ Hàng
               <i class="fas fa-cart-arrow-down"></i>
             </button>
           </form>
         </li>
       </ul>
       <!---->
-      <div class="overlay-login text-left">
+      <!-- <div class="overlay-login text-left">
         <button type="button" class="overlay-close1">
           <i class="fa fa-times" aria-hidden="true"></i>
         </button>
@@ -60,10 +60,11 @@
             </form>
           </div>
         </div>
-      </div>
+      </div> -->
       <!---->
     </div>
   </div>
+
   <div class="search">
     <div class="mobile-nav-button">
       <button id="trigger-overlay" type="button">
@@ -85,8 +86,9 @@
     </div>
     <!-- open/close -->
   </div>
+
   <label class="top-log mx-auto"></label>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light top-header mb-2">
+  <nav class="navbar navbar-expand-lg navbar-light top-header">
 
     <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -97,25 +99,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav nav-mega mx-auto">
         <li class="nav-item active">
-          <a class="nav-link ml-lg-0" routerLink="">Home
+          <a class="nav-link ml-lg-0" href="#">Trang Chủ
             <span class="sr-only">(current)</span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="">Product</a>
+          <a class="nav-link" href="#/client/products">Sản Phẩm</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="about">About</a>
+          <a class="nav-link" href="#/client/about">Giới Thiệu</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="shop">Shop</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="contact">Contact</a>
+          <a class="nav-link" href="#/client/contact">Liên Hệ</a>
         </li>
       </ul>
 
