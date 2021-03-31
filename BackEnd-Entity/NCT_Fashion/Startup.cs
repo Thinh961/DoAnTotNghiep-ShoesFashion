@@ -101,8 +101,8 @@ namespace NCT_Fashion
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
-                    Path.Combine(env.ContentRootPath,"Images")),
-                RequestPath= "/Images"
+                    Path.Combine(Directory.GetCurrentDirectory(),"Photos")),
+                RequestPath="/Photos"
             });
         }
     }

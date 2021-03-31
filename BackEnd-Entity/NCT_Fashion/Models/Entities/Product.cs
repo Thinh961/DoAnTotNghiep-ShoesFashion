@@ -24,6 +24,9 @@ namespace NCT_Fashion.Models.Entities
         [Required]
         public string Image { get; set; }
 
+        //[NotMapped]
+        //public IFormFile ImageFile { get; set; }
+
         public int Status { get; set; }
 
         public DateTime? CreateDate { get; set; }

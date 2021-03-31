@@ -118,7 +118,6 @@ namespace NCT_Fashion.Controllers
                 return Ok(new RegistrationResponse()
                 {
                     Success = true,
-                    use_type = "Admin",
                     Token = jwtToken
                 });
             }
