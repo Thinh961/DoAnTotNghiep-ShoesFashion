@@ -46,8 +46,8 @@ export class AddEditProdComponent implements OnInit {
     this.shortName = this.products.shortName;
     this.startSale = this.products.startSale;
     this.endSale = this.products.endSale;
+    // path Ảnh local
     this.PhotoFilePath = this.service.PhotoUrl+this.image;
-
   }
 
 

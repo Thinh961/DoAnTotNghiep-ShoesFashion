@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NCT_Fashion.Configuration;
@@ -7,6 +8,8 @@ using NCT_Fashion.Models.DTOs.Requests;
 using NCT_Fashion.Models.DTOs.Responses;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -22,13 +25,41 @@ namespace NCT_Fashion.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly JwtConfig _jwtConfig;
 
+        private readonly IConfiguration _configuration;
+
         public authManagementController(
             UserManager<IdentityUser> userManager,
-            IOptionsMonitor<JwtConfig> optionsMonitor)
+            IOptionsMonitor<JwtConfig> optionsMonitor,
+            IConfiguration configuration)
         {
             _userManager = userManager;
             _jwtConfig = optionsMonitor.CurrentValue;
+            _configuration = configuration;
         }
+
+        //GET Method
+        //[HttpGet]
+        //public JsonResult Get()
+        //{
+        //    string query = @"select * from AspNetUsers";
+        //    DataTable table = new DataTable();
+        //    string sqlDataSource = _configuration.GetConnectionString("NCT_FashionContext");
+        //    SqlDataReader myReader;
+        //    using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+        //    {
+        //        myCon.Open();
+        //        using (SqlCommand myCommand = new SqlCommand(query, myCon))
+        //        {
+        //            myReader = myCommand.ExecuteReader();
+        //            table.Load(myReader);
+
+        //            myReader.Close();
+        //            myCon.Close();
+        //        }
+        //    }
+
+        //    return new JsonResult(table);
+        //}
 
         [HttpPost]
         [Route("register")]

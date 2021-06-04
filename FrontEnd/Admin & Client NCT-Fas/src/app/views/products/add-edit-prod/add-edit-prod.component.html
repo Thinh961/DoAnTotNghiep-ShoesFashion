@@ -35,7 +35,7 @@
         [(ngModel)]="image"
         placeholder="Thêm ảnh"
       /> -->
-      <img [src]=PhotoFilePath height="100px" width="100px">
+      <img [src]="PhotoFilePath" height="100px" width="130px">
       <input type="file" (change)="uploadPhoto($event)" class="mt-2">
     </div>
 

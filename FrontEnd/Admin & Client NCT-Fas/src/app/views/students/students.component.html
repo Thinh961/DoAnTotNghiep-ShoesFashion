@@ -39,15 +39,10 @@
               <!-- Item -->
               <tr
                 *ngFor="
-                  let i of EmployeeListArray
-                    | paginate
-                      : {
+                  let i of EmployeeListArray | paginate : {
                           itemsPerPage: tableSize,
                           currentPage: page,
-                          totalItems: count
-                        }
-                "
-              >
+                          totalItems: count} ">
                 <td>{{ i.id }}</td>
                 <td>
                   {{ i.username }}
